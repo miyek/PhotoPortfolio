@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <title>HOME | Photography portfolio</title>
+        
+        <!-- script  libraries -->
+        <script src="js/jquery-1.11.3.min.js"></script>
+        
+        <!--Custom stylesheet-->
+        <link href="css/style.css" rel="stylesheet">
+
+    </head>
+
+    <body>
+    
+        <!--Header start-->
+        <header class="header-main sidebar">
+            <div class="inside">
+        
+                <h3 class="brand-name">Photography portfolio</h3>
+                
+                <button class="menu-toggle"><i>Menu</i></button>
+
+                <div class="panel-toggle">
+                    <nav class="nav nav-first nav-header">
+                        <ul>
+                            <li><a href="index.html">Home</a></li>
+                            <li><a href="#">Portfolio</a>
+                                <ul class="nav nav-second">
+                                    <li><a href="thumbnails.html" id="thumbnails">Thumbnails</a></li>
+                                    <li><a href="infinity.html">Normal (Scroll)</a></li>
+                                    <li><a href="slider.html">Slider</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="about.html">About</a></li>
+                            <li><a href="contact.html">Contact</a></li>
+                        </ul>
+                    </nav>
+
+                    <div class="social-ico">
+                        <a href="#facebook" class="social-ico-link fb">FB</a>
+                        <a href="#twitter" class="social-ico-link tw">TW</a>
+                        <a href="#instagram" class="social-ico-link inst">INST</a>
+                    </div>
+                </div>
+                    
+            </div>
+        </header>
+        <!--/.Header end-->
+        
+        <!--Main start-->
+        <main class="main-main content-right">
+            <div class="container-right">
+                
+                <!--video + slider-->
+                <div class="slider">
+
+                    <div><!--row-->
+
+                        <div class="slide slide-1 video active">                        
+                            <h3 class="title">Polina Sample Video</h3>
+                            <p class="description">filmed by Alexander Wagner 2011</p>
+                            <a href="#" class="link">#mp4video</a>
+
+                            <video width="100%" height="auto" autoplay loop>
+                                <source src="video/polina.webm"  >
+                                <source src="video/polina.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <!--<div class="overlay"></div>-->
+                        </div>
+
+                        <div class="slide slide-2">                        
+                            <h3 class="title">Title. Big title. Dreaming</h3>
+                            <p class="description">Change your life</p>
+                            <a href="#" class="link">#whereyouwantogo</a>
+                            <img src="images/slider/ezio_photography_bg_11.jpg" alt="" class="img" >
+                        </div>                  
+
+                    </div>
+
+                    <button class="btn prev"><i>Prev</i></button>
+                    <button class="btn next"><i>Next</i></button>
+
+                </div>
+                
+            </div>
+        </main>
+        <!--/.Main end-->
+        
+        
+        <!--Footer start-->
+        <footer class="footer-main">
+            Copyright 2016 Lukasz Zadylak
+        </footer>
+        <!--/.Footer end-->
+        
+        <!--load cover-->
+        <div class="loadcover">
+            <div class="loading"></div>
+        </div>
+        
+        <!-- Custom script -->
+        <script src="js/custom.js"></script>
+        
+    </body>
+
+</html>

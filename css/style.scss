@@ -1,0 +1,1089 @@
+@import 'normalize';
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700);
+
+body{
+    font-family: 'Open Sans Condensed', Arial, sans-serif;
+    font-size: 15px;
+    line-height: 18px;
+    color: #767a8d; //<!--Main first color
+    background: #FFF;
+}
+
+:active, :focus{
+        outline-style: none;
+    }
+
+
+/* structure off page */
+$sidebar-size: 280px;
+$background-color1: #f3f3f3;
+
+/* strcuture color */
+$secondcolor: #c5a36e; //<--Main second color;
+$navlink1: #000;
+$navlink1hover: $secondcolor;
+
+//loading
+.loadcover{
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: #FFF;
+    position: absolute;
+    z-index: 9999;
+    top: 0px;
+    .loading{
+        margin-left: 45%;
+        margin-top: 20%;
+    }
+}
+
+.sidebar{
+    float: left;
+    display: block;
+    width: $sidebar-size;
+    height: 100%;
+    position: fixed;
+    z-index: 100;   
+    .inside{
+        margin: 40px;
+    }  
+    transition: all 1s ease-in-out;
+        -moz-transition:    all 1s ease-in-out; /* Firefox */
+        -webkit-transition: all 1s ease-in-out; /* Webkit */
+        -o-transition:      all 1s ease-in-out; /* Opera */
+        -ms-transition:     all 1s ease-in-out; /* IE 9 */
+}
+ 
+.content-right{
+    margin-left: $sidebar-size;
+}
+.container-right{
+    display: block;
+    width: 100%;
+    min-height: 400px;
+    background: $background-color1;
+    overflow: hidden;
+}
+
+.footer-main{
+    clear: both;
+    background: #FFF;
+    padding: 2px 5px 2px 5px;
+    font-size: 0.7em;
+    line-height: 40px;
+    display: block;
+    text-align: right;
+}
+.row{
+    display: block;
+}
+.row-black{
+    display: block;
+    background: #000;
+    color: #e3e3e3;
+    h1,h2,h3,h4{
+        color: $secondcolor;
+    }
+}
+.col-lg-2{
+    display: inline-block;
+    width: 48.5%;
+}
+.col-lg-3{
+    display: inline-block;
+    width: 32.5%;
+}
+.col-lg-4{
+    display: inline-block;
+    width: 24.5%;
+}
+.text-justify{
+    text-align: justify;
+}
+.text-center{
+    text-align: center;
+}
+blockquote{
+    font-size: 2em;
+    line-height: 2em;
+    font-style: italic;
+}
+.form{
+    padding: 5px;
+    input{
+        padding: 5px;
+        width: 98%;
+        opacity: 0.6;
+    }
+    textarea{
+        padding: 5px;
+        width: 98%;
+        opacity: 0.6;
+    }
+    :active,:focus{
+        opacity: 1;
+    }
+}
+
+//text
+.text{
+    line-height: 1.5em;
+    .col-lg-2{
+        vertical-align: text-top;      
+    }
+    .col-lg-3{
+        vertical-align: text-top;
+    }
+    .col-lg-4{
+        vertical-align: text-top;
+    }
+}
+
+/* menu toogle */
+.menu-toggle{
+    display: block;
+    width: 26px;
+    height: 24px;
+    background: url(../images/menu.jpg);
+    border: none;
+    overflow: hidden;
+    position: absolute;
+    right: 30px;
+    top: 30px;
+    outline: none;
+    transition: opacity 0.5s;
+        -moz-transition:    opacity 0.5s; /* Firefox */
+        -webkit-transition: opacity 0.5s; /* Webkit */
+        -o-transition:      opacity 0.5s; /* Opera */
+        -ms-transition:     opacity 0.5s; /* IE 9 */
+    i{
+        padding-left: 50px;
+    }
+}
+.menu-toggle:hover{
+    opacity: 0.5;
+}
+.activeToggle{
+    opacity: 0.3;
+}
+
+/* nav menu */
+.nav{
+    ul{
+        list-style: none;
+        margin: 0px;
+        font-size: 1.01em;
+        text-transform: uppercase;
+    }
+    li{
+    }
+    ul li a{
+        color: $navlink1;
+        text-decoration: none;
+        transition: color 0.5s;
+            -moz-transition:    color 0.5s; /* Firefox */
+            -webkit-transition: color 0.5s; /* Webkit */
+            -o-transition:      color 0.5s; /* Opera */
+            -ms-transition:     color 0.5s; /* IE 9 */
+    }
+    ul li a:hover{
+        color: $navlink1hover;
+        text-decoration: none;
+    }
+}
+/* nav menu for header */
+.nav-header{
+     ul li ul{
+        display: none;
+        visibility: hidden;
+        position: absolute;
+    }
+    ul li ul a {
+        color:#FFF;
+    }
+    .active{
+        display: block;
+        visibility: visible;
+        background: #000;
+        position: absolute;
+    }
+}
+
+/* Brand name */
+.brand-name{
+    color: $secondcolor;
+    background: transparent url(../images/logo.jpg) 0 0 no-repeat;
+    background-size:contain;
+    width: 197px;
+    height: 77px;
+    overflow: hidden;
+    line-height: 500px;
+    text-indent: -9999px;
+    white-space: nowrap;
+    margin: 0px;
+}
+/*social ico*/
+.social-ico{
+    .social-ico-link{
+        display: inline-block;
+        width: 20px;
+        height: 20px;
+        overflow: hidden;
+        line-height: 100px;
+        text-indent: -9999px;
+        white-space: nowrap;
+        margin: 10px;
+        transition: opacity 1s;
+            -moz-transition:    opacity 1s; /* Firefox */
+            -webkit-transition: opacity 1s; /* Webkit */
+            -o-transition:      opacity 1s; /* Opera */
+            -ms-transition:     opacity 1s; /* IE 9 */
+    }
+    .social-ico-link:hover{
+        opacity: 0.5;
+    }
+    .fb{
+        background: url(../images/fb.jpg);
+    }
+    .tw{
+        background: url(../images/tw.jpg);
+    }
+    .inst{
+        background: url(../images/in.jpg);
+    }
+}
+
+/* Main web page content */
+.main-main{
+    .row{
+        padding: 20px;
+    }
+    .fullwidth{
+        padding: 0px;
+    }
+    h2{
+        margin: 0px;
+        padding: 0px;
+        font-weight: 700;
+        font-size: 1.714em;
+        color: #000;
+        text-transform: uppercase;
+    }
+    .lead{
+       font-size: 1.1em;
+        line-height: 1.3em; 
+    }
+}
+
+.loading{
+    display: inline-block;
+    height: 80px;
+    width: 80px;
+    background: url(../images/ring.gif) center no-repeat;
+    background-size: cover;
+}
+
+/* video */
+.video{
+    position: relative;
+    background: #000;
+    video{
+        z-index: 1;
+        position: absolute;
+    }
+}
+
+/* Overlay dots */
+.overlay{
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-image: -moz-linear-gradient(45deg, #666 25%, transparent 25%), 
+        -moz-linear-gradient(-45deg, #666 25%, transparent 25%), 
+        -moz-linear-gradient(45deg, transparent 75%, #666 75%), 
+        -moz-linear-gradient(-45deg, transparent 75%, #666 75%);
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, #666), color-stop(.25, transparent)), 
+        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.25, #666), color-stop(.25, transparent)), 
+        -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.75, transparent), color-stop(.75, #666)), 
+        -webkit-gradient(linear, 0 0, 100% 100%, color-stop(.75, transparent), color-stop(.75, #666));
+    background-image: -webkit-linear-gradient(45deg, #666 25%, transparent 25%), 
+        -webkit-linear-gradient(-45deg, #666 25%, transparent 25%), 
+        -webkit-linear-gradient(45deg, transparent 75%, #666 75%), 
+        -webkit-linear-gradient(-45deg, transparent 75%, #666 75%);
+    background-image: -o-linear-gradient(45deg, #666 25%, transparent 25%), 
+        -o-linear-gradient(-45deg, #666 25%, transparent 25%), 
+        -o-linear-gradient(45deg, transparent 75%, #666 75%), 
+        -o-linear-gradient(-45deg, transparent 75%, #666 75%);
+    background-image: linear-gradient(45deg, #666 25%, transparent 25%), 
+        linear-gradient(-45deg, #666 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, #666 75%), 
+        linear-gradient(-45deg, transparent 75%, #666 75%);
+    -moz-background-size: 2px 2px;
+    background-size: 2px 2px;
+    -webkit-background-size: 2px 2.1px; /* override value for webkit */
+    background-position: 0 0, 1px 0, 1px -1px, 0px 1px;
+}
+
+/* Photos */
+.photos{
+
+}
+
+/* Photos Thumbnails */
+.thumbnails{
+    .col-lg-4{
+    }
+    .img-thumb{
+        position: relative; 
+        overflow: hidden;
+        margin-right: 20px;
+        margin-bottom: 20px;
+    }
+    a{
+        display: block;
+        position: absolute;
+        z-index: 3;
+        width: 100%;
+        height: 100%;
+        padding-top: 160px;
+        text-align: center;
+        color: #FFF;
+        transition: all 0.5s;
+            -moz-transition:    all 0.5s; /* Firefox */
+            -webkit-transition: all 0.5s; /* Webkit */
+            -o-transition:      all 0.5s; /* Opera */
+            -ms-transition:     all 0.5s; /* IE 9 */
+      
+    }
+    a:hover{
+         background: rgba(0, 0, 0, 0.5);
+    }
+    a .title{
+        display: none;
+        width: 100%;
+        position: absolute;
+        z-index: 4;
+        top: 45%;
+        text-align: center;
+        align-content: center;
+        color: #FFF;
+    }
+    a:hover .title{
+        display: block;
+        
+    }
+    .img{
+        width: 260px;
+        height: 260px;
+        transition: all 1s;
+            -moz-transition:    all 1s; /* Firefox */
+            -webkit-transition: all 1s; /* Webkit */
+            -o-transition:      all 1s; /* Opera */
+            -ms-transition:     all 1s; /* IE 9 */
+    }
+    .scale{
+        transform: scale(1.1);
+            -moz-transform:    scale(1.1); /* Firefox */
+            -webkit-transform: scale(1.1); /* Webkit */
+            -o-transform:      scale(1.1); /* Opera */
+            -ms-transform:     scale(1.1); /* IE 9 */
+    }
+
+}
+
+// Infinity
+.infinity{
+    $width:280px;
+    .col-lg-4{
+        display: block;
+        width: $width;
+        background: #FFF;
+        border: solid 1px #e3e3e3;
+        padding: 5px;
+        margin: 10px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+        transition: all 1s;
+            -moz-transition:    all 1s; /* Firefox */
+            -webkit-transition: all 1s; /* Webkit */
+            -o-transition:      all 1s; /* Opera */
+            -ms-transition:     all 1s; /* IE 9 */
+    }
+    .img-thumb{
+    }
+    a{
+        display: block;
+        color: #000;
+        text-decoration: none;
+        transition: color 1s;
+        font-size: 1.1em;
+        padding: 5px;
+        margin-bottom: 10px;
+    }
+    a:hover{
+        color: $secondcolor;
+    }
+    .img{
+        width: $width;
+        transition: all 1s;
+            -moz-transition:    all 1s; /* Firefox */
+            -webkit-transition: all 1s; /* Webkit */
+            -o-transition:      all 1s; /* Opera */
+            -ms-transition:     all 1s; /* IE 9 */
+    }
+}
+
+/* Slider */
+.slider{
+    $height: 300px;
+    overflow: hidden;
+    height: $height;
+    position: relative;  
+    .slide{
+        position: relative;
+        overflow: hidden;
+        height: $height;
+        display: none;
+        .title{
+            display: block;
+            width: 100%;
+            position: absolute;
+            z-index: 4;
+            top:110%;
+            text-align: center;
+            font-size: 1.6em;
+            font-weight: 700;
+            color:#FFF;
+            text-shadow: 1px 1px 0px #000;
+            opacity: 0;
+            transition: opacity 2s 0.5s, top 2s 0.5s;  //for hover/slider
+                -moz-transition:    opacity 2s 0.5s, top 2s 0.5s; /* Firefox */
+                -webkit-transition: opacity 2s 0.5s, top 2s 0.5s; /* Webkit */
+                -o-transition:      opacity 2s 0.5s, top 2s 0.5s; /* Opera */
+                -ms-transition:     opacity 2s 0.5s, top 2s 0.5s; /* IE 9 */
+        }
+        .description{
+            display: block;
+            width: 100%;
+            position: absolute;
+            z-index: 4;
+            top:50%;
+            text-align: center;
+            font-size: 0.88em;
+            text-transform: uppercase;
+            font-weight: bold;
+            color:$secondcolor;
+            opacity: 0;
+            transition: opacity 2s 1s;  //for slider
+                -moz-transition:    opacity 2s 1s; /* Firefox */
+                -webkit-transition: opacity 2s 1s; /* Webkit */
+                -o-transition:      opacity 2s 1s; /* Opera */
+                -ms-transition:     opacity 2s 1s; /* IE 9 */
+        }
+        .link{
+            display: block;
+            width: 100%;
+            position: absolute;
+            z-index: 4;
+            top:75%;
+            text-align: center;
+            font-size: 2.5em;
+            font-size: 2em;
+            color:#FFF;
+            text-decoration: none;
+            text-shadow: 1px 1px 0px #000;
+            opacity: 0;
+            transition: opacity 2s 2s, color 1s;  //for hover/slider 
+                -moz-transition:    opacity 2s 2s, color 1s; /* Firefox */
+                -webkit-transition: opacity 2s 2s, color 1s; /* Webkit */
+                -o-transition:      opacity 2s 2s, color 1s; /* Opera */
+                -ms-transition:     opacity 2s 2s, color 1s; /* IE 9 */
+        }
+        .link:hover{
+            color:$secondcolor;
+        }
+        .img{
+            position: absolute;
+            z-index: 1;
+            height: $height;
+            width: 100%;
+            transition: transform 8s 1s; //for slider
+                -moz-transition:    transform 8s 1s; /* Firefox */
+                -webkit-transition: transform 8s 1s; /* Webkit */
+                -o-transition:      transform 8s 1s; /* Opera */
+                -ms-transition:     transform 8s 1s; /* IE 9 */
+        }
+    }
+    .active{
+        display: block!important;
+        .title{
+            top: 55%;
+            opacity: 1; 
+        }
+        .description{
+            opacity: 1;
+        }
+        .link{
+            opacity: 1;
+        }
+        .img{
+           transform: scale(1.5);
+            -moz-transition:    scale(1.5); /* Firefox */
+            -webkit-transition: scale(1.5); /* Webkit */
+            -o-transition:      scale(1.5); /* Opera */
+            -ms-transition:     scale(1.5); /* IE 9 */
+        }
+    }
+    .btn{
+        display: block;
+        position: absolute;
+        top:40%;
+        z-index: 10;
+        width: 30px;
+        height: 47px;
+        background: none;
+        border: none;
+        opacity: 0.3;
+        transition: opacity 0.5s;
+            -moz-transition:    opacity 0.5s; /* Firefox */
+            -webkit-transition: opacity 0.5s; /* Webkit */
+            -o-transition:      opacity 0.5s; /* Opera */
+            -ms-transition:     opacity 0.5s; /* IE 9 */
+    }
+    .btn:hover{
+        opacity: 1;
+    }
+    .btn i{
+        visibility: hidden;
+    }
+    .prev{
+        left: 10px;
+        background: transparent url(../images/left-arrow.png) 0 0 no-repeat;
+        background-size: cover;
+    }
+    .next{
+        right: 10px;
+        background: transparent url(../images/right-arrow.png) 0 0 no-repeat;
+        background-size:cover;
+    }
+}
+
+// Button
+.btn{}
+.btn-more{}
+.btn-loadmore{
+    background: #FFF;
+    border: solid 2px #CCC;
+    padding: 8px;
+    transition: all 1s;
+            -moz-transition:    all 1s; /* Firefox */
+            -webkit-transition: all 1s; /* Webkit */
+            -o-transition:      all 1s; /* Opera */
+            -ms-transition:     all 1s; /* IE 9 */
+}
+.btn-loadmore:hover{
+    border-color: $secondcolor;
+}
+
+/* ## MEDIA QUERY */
+
+/* Custom, iPhone Retina */ 
+@media only screen and (min-width : 320px) {
+
+    //structure
+    //nav smallest
+    .sidebar{
+        float: none;
+        width: 100%;
+        height: 77px;
+        position: relative;
+        .inside{
+            margin: 0;
+        }
+    }
+    .content-right{
+        margin-left: 0;
+    }
+    
+    .brand-name{
+        padding-left: 0px;
+        display: block;
+        float: none;
+        width: 100%;
+    }
+    
+    //text
+    .text{
+        .col-lg-2{
+            width: 100%;
+        }
+        .col-lg-3{
+            width: 100%;
+        }
+        .col-lg-4{
+            width: 100%;
+        }
+    }
+    
+    .nav{
+        padding:0px;
+        ul{
+            padding: 0px;
+            display: block;
+            float: none;
+            width: 100%;
+        }
+        li{
+            padding: 15px 20px 15px 20px;
+            display: block;
+            border-bottom: solid 1px #e3e3e3;
+        }
+        a{
+            display: block;
+        }
+    }
+    .nav-header{
+        ul li ul{
+            margin-top: 10px;
+        }
+        ul li ul li{
+            display: block;
+            padding: 15px;
+            border-bottom: solid 1px #272727;
+        }
+        .active{
+            top: auto;
+            width: auto;
+            position: relative;
+        }
+        
+    }
+    .social-ico{
+        display: block;
+        width: 100%;
+        float: left;
+        padding:30px 0px 30px 15px;
+        background: #FFF;
+    }
+    //show after button toggle
+    .panel-toggle{
+        display: none;
+    }
+    .show{
+        display: block;
+        background: #FFF;
+        width: 100%
+    }    
+    
+    //photos thumbnails view
+    $width: 100%;
+    .thumbnails{
+        .col-lg-4{
+            width: 100%;
+            max-width: $width;
+        }
+        .img{
+            width: $width;
+            height: auto;
+        }
+
+    }
+
+}
+
+/* Extra Small Devices, Phones */ 
+@media only screen and (min-width : 480px) {
+    
+    //text
+    .text{
+        .col-lg-2{
+            width: 40%;
+            padding: 20px;
+        }
+        .col-lg-3{
+            width: 90%;
+            padding: 20px;
+        }
+        .col-lg-4{
+            width: 90%;
+            padding: 20px;
+        }
+    }
+ 
+    /* Slider */
+    .slider{
+        $height:400px;
+        height: $height;
+        .slide{
+            height: $height;
+        }   
+        .slide{
+            .title{
+                font-size: 1.8em;
+            }
+            .link{
+                font-size: 2.2em;   
+            }
+            .img{
+                height: $height;
+            }
+        }
+    }
+    
+    // Infinity
+    .infinity{
+        $width:400px;
+        .col-lg-4{
+            width: $width;
+        }
+        .img{
+          width: $width;
+        }
+    }
+    
+}
+
+/* !!! Small Devices, Tablets */
+@media only screen and (min-width : 768px) {
+    
+    //structure
+    .sidebar{
+        .inside{
+            margin: 0 0 0 20px;
+        }
+    }
+    //nav up
+    .brand-name{
+        padding-left: 0px;
+        display: inline-block;
+        float: left;
+        width: 30%;
+    }
+    .menu-toggle{
+        display: none;
+        visibility: hidden;
+    }
+    .nav{
+        padding-top: 30px;
+        ul{
+            padding: 0px;
+            display: inline-block;
+            float: left;
+            width: 40%;
+        }
+        li{
+            padding: 0 5px 0 5px;
+            display: inline-block;
+            border-bottom: none;
+        }
+    }
+    .nav-header{
+        ul li ul{
+            margin: 0px;
+        }
+        ul li ul li{
+            display: block;
+            padding: 15px;
+            border-bottom: none;
+        }
+        .active{
+            top:60px;
+            width: 200px;
+            position: absolute;
+        }
+    }
+    .social-ico{
+        display: inline-block;
+        width: 30%;
+        float: right;
+        padding: 0px;
+         .social-ico-link{
+            margin: 0px 10px 0px 10px;
+        }
+    }
+    
+    //show after button toggle
+    .panel-toggle{
+        display:block!important;
+    }
+        
+    //photos thumbnails view
+    $width: 200px;
+    .thumbnails{
+        .col-lg-4{
+            width: 24.5%;
+            max-width: $width;
+            max-height: auto;
+        }
+        .img{
+            width: $width;
+            height: auto;
+        }
+
+    }
+    
+    // Infinity
+    .infinity{
+        $width:450px;
+        .col-lg-4{
+            width: $width;
+        }
+        .img{
+          width: $width;
+        }
+    }
+
+    /* Slider */
+    .slider{
+        $height:500px;
+        height: $height;
+        .slide{
+            height: $height;
+        }   
+        .slide{
+            .title{
+                font-size: 2em;
+            }
+            .link{
+                font-size: 2.8em;   
+            }
+            .img{
+                height: $height;
+            }
+        }
+    }
+
+}
+
+/* Small Devices, Tablets */
+@media only screen and (min-width : 852px) {  
+    
+    //text
+    .text{
+        .col-lg-2{
+            width: 40%;
+            padding: 20px;
+        }
+        .col-lg-3{
+            width: 26%;
+            padding: 20px;
+        }
+        .col-lg-4{
+            width: 20%;
+            padding: 20px;
+        }
+    }
+    
+    //photos thumbnails view
+    $width: 290px;
+    .thumbnails{
+        .col-lg-4{
+            width: 33%;
+            max-width: $width;
+            max-height: $width;
+        }
+        .img{
+            width: $width;
+            height: $width;
+        }
+
+    }
+    
+    // Infinity
+    .infinity{
+        $width:500px;
+        .col-lg-4{
+            width: $width;
+        }
+        .img{
+          width: $width;
+        }
+    }
+
+    
+}
+
+/* !!! Medium Devices, Desktops, Ekstra mode */
+@media only screen and (min-width : 945px) {
+    
+     //structure
+    .sidebar{
+        width: $sidebar-size;
+         
+        position: fixed;
+        .inside{
+            margin: 40px;
+        }
+    }
+    .content-right{
+        margin-left: $sidebar-size;
+    }
+    
+    .brand-name{
+        display: block;
+        float: left;
+        width: 100%;
+        margin-top: 50px;
+        margin-bottom: 100px;
+    }
+    /* nav menu */
+    .nav{
+        padding-top: 0px;
+        ul{
+            padding: 0 0 0 15px;
+            display: block;
+            float: none;
+            width: 100%;
+            padding: 0 0 0 15px;
+        }
+        li{
+            padding: 15px 0 15px 0;
+            display: block;
+        }
+    }
+    .nav-header{
+        ul li ul{
+            display: none;
+           
+        }
+        ul li ul li{
+            padding-left: 20px;
+        }
+        .active{
+            left: $sidebar-size;
+           margin-top:-20px;
+            top: auto;
+         }
+    }
+    .social-ico{
+        display: block;
+        width: 100%;
+        float: none;
+        margin-top: 50px;
+        .social-ico-link{
+            margin: 10px;
+        }
+    }
+        
+    //photos thumbnails view
+    $width: 200px;
+    .thumbnails{
+        .col-lg-4{
+            width: 33%;
+            max-width: $width;
+            max-height: $width;
+        }
+        .img{
+            width: $width;
+            height: $width;
+        }
+
+    }
+
+}
+
+/* Medium Devices, Desktops */
+@media only screen and (min-width : 992px) {
+    
+    //photos thumbnails view
+    $width: 400px;
+    .thumbnails{
+        .col-lg-4{
+            width: 49%;
+            max-width: $width;
+            max-height: auto;
+        }
+        .img{
+            width: $width;
+            height: auto;
+        }
+
+    } 
+    // Infinity
+    .infinity{
+        $width:500px;
+        .col-lg-4{
+            width: $width;
+        }
+        .img{
+          width: $width;
+        }
+    }
+    
+}
+
+/* Large Devices, extra mode */
+@media only screen and (min-width : 1125px) {
+    
+    //photos thumbnails view
+    $width: 260px;
+    .thumbnails{
+        .col-lg-4{
+            width: 33%;
+            max-width: $width;
+            max-height: auto;
+        }
+        .img{
+            width: $width;
+            height: auto;
+        }
+
+    }
+}
+
+/* Large Devices, Wide Screens */
+@media only screen and (min-width : 1200px) {
+    
+    //photos thumbnails view
+    $width: 280px;
+    .thumbnails{
+        .col-lg-4{
+            width: 24.5%;
+            max-width: $width;
+            max-height: $width;
+        }
+        .img{
+            width: $width;
+            height: $width;
+        }
+
+    }
+    
+    // Infinity
+    .infinity{
+        $width:600px;
+        .col-lg-4{
+            width: $width;
+        }
+        .img{
+          width: $width;
+        }
+    }
+    
+    /* Slider */
+    .slider{
+        $height:630px;
+        height: $height;
+        .slide{
+            height: $height;
+        }   
+        .slide{
+            .title{
+                font-size: 2.5em;
+            }
+            .description{
+                font-size: 1em;
+            }
+            .link{
+                font-size: 2.5em;   
+            }
+            .img{
+                height: $height;
+            }
+        }
+    }
+
+}
